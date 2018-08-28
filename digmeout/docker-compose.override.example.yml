@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  digmeout:
+    image: digmeout:dev
+    environment:
+      VIRTUAL_HOST: digmeout.local,www.digmeout.local
+    restart: always
+    external_links:
+    - mysqldb
+    networks:
+    - dev_network
+    volumes:
+    - .:/var/www/html
+networks:
+  dev_network:
+    external:
+      name: dev_network

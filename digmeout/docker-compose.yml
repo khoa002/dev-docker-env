@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  digmeout:
+    container_name: digmeout
+    build: .
+    image: digmeout:dev
+    environment:
+      VIRTUAL_HOST: digmeout.local
+    external_links:
+    - mysqldb
