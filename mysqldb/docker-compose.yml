@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  mysqldb:
+    container_name: mysqldb
+    build: .
+    image: mysqldb:dev

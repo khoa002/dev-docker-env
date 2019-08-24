@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  digmeout:
+    image: dovly-legacy:dev
+    environment:
+      VIRTUAL_HOST: dovly-legacy.proj,www.dovly-legacy.proj
+    restart: always
+    external_links:
+      - mysqldb
+    networks:
+      - dev_network
+    volumes:
+      - .:/var/www/html
+networks:
+  dev_network:
+    external:
+      name: dev_network

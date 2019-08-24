@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  digmeout:
+    container_name: dovly-legacy
+    build: .
+    image: dovly-legacy:dev
+    environment:
+      VIRTUAL_HOST: dovly-legacy.proj
+    external_links:
+      - mysqldb
