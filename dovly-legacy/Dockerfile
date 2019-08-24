@@ -19,7 +19,7 @@ nano \
 curl
 RUN curl -s https://getcomposer.org/installer | php
 RUN mv composer.phar /usr/local/bin/composer
-COPY conf/digmeout.conf /etc/apache2/sites-available/
+COPY conf/dovly-legacy.conf /etc/apache2/sites-available/
 RUN a2dissite 000-default.conf
 RUN a2ensite dovly-legacy.conf
 RUN a2enmod rewrite
