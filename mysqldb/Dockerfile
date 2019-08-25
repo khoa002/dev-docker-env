@@ -1,5 +1,5 @@
 # mysqldb:dev
-FROM mysql/mysql-server:latest as mysqldb
+FROM mysql/mysql-server:5.7 as mysqldb
 LABEL maintainer="khoa002@gmail.com"
 #RUN echo "[mysqld]" >> /etc/my.cnf
 RUN echo "lower_case_table_names = 0" >> /etc/my.cnf
@@ -14,5 +14,5 @@ RUN echo "lower_case_table_names = 0" >> /etc/my.cnf
 #if mysql v8+
 #     CREATE USER 'root'@'%' IDENTIFIED BY 'root';
 #     GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
-#then
+#then, just run this if mysql version below 8
 #     GRANT ALL ON *.* TO 'root'@'%' IDENTIFIED BY 'root';
