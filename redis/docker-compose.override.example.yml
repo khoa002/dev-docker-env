@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:dev
+    networks:
+      - dev_network
+    restart: always
+    volumes:
+      - ./data:/data
+networks:
+  dev_network:
+    external:
+      name: dev_network

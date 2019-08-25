@@ -1,7 +1,7 @@
 version: '3'
 
 services:
-  digmeout:
+  dovly-legacy:
     image: dovly-legacy:dev
     environment:
       VIRTUAL_HOST: dovly-legacy.proj,www.dovly-legacy.proj

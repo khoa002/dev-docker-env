@@ -10,6 +10,8 @@ RUN apt-get -y update && apt-get install -y \
 apache2 \
 php7.2 \
 libapache2-mod-php7.2 \
+php7.2-curl \
+php7.2-gd \
 php7.2-mbstring \
 php7.2-mysqli \
 php7.2-xml \
