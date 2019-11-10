@@ -5,7 +5,7 @@ services:
     image: dovly-legacy:dev
     environment:
       VIRTUAL_HOST: dovly-legacy.proj,www.dovly-legacy.proj
-    restart: always
+    #restart: always
     external_links:
       - mysqldb
     networks:

@@ -5,9 +5,9 @@ services:
     image: mysqldb:dev
     networks:
       - dev_network
-    restart: always
+    #restart: always
     ports:
-      - 3306:3306
+      - 3306:3306 # this needs to 127.0.0.1:3306:3306 if connection from host machine is needed
     environment:
       MYSQL_ROOT_HOST: '%' # this should not be enabled on production environments
       MYSQL_ROOT_PASSWORD: 'root'
