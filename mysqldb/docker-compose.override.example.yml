@@ -9,6 +9,7 @@ services:
     ports:
       - 3306:3306
     environment:
+      MYSQL_ROOT_HOST: '%' # this should not be enabled on production environments
       MYSQL_ROOT_PASSWORD: 'root'
       MYSQL_USER: 'local'
       MYSQL_PASSWORD: 'local'
